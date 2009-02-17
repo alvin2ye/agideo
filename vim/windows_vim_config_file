@@ -1,0 +1,74 @@
+" ------------------------------------------------------------------------- 
+" My Vim Configuration  
+" ------------------------------------------------------------------------- 
+ 
+" -------------------------------------------------------------------------  
+" Common Settings 
+" -------------------------------------------------------------------------  
+set nocompatible                        " Use vim advance settings 
+set autoindent                          " Auto-indent on  
+set tabstop=4                           " Use 4 spaces for tabs 
+set shiftwidth=2                        " 2 spaces for autoindent  
+set expandtab                           " Use space instead of tabs 
+"set foldcolumn=4                       " Colums for fold display 
+"set incsearch                          " Incremental search 
+"set hlsearch                           " Highlight search hits 
+set showcmd                             " Show panding commands  
+set cmdheight=1                         " lines for command window 
+set laststatus=2                        " Always show status line  
+set backspace=indent,eol,start          " Backspace over everyting 
+set history=50                          " Save at most 50 commands  
+"set ruler                              " show ruler  
+"set showmatch                          " Display matching paren  
+"set matchtime=2                        " Be breif when displaying the match  
+set nobackup                            " No backups 
+set visualbell                          " Use visual bell  
+"set mouse=nv                           " Mouse in normal and visual  
+"set viminfo='100,f1,rE:,:100,/100      " Vim info options  
+set lazyredraw                          " Don't redraw on macro execute 
+set noerrorbells                        " Don't make noise  
+set autoread                            " Re-read if modified 
+"set backupcopy=yes                     " Save resources 
+set diffopt=filler,iwhite               " Diff options  
+set nostartofline                       " Keep cursor column when moving 
+set number                              " Show number of line on left  
+set helplang=cn,en                      " Language of help 
+set enc=cp936                           " cp936 in Winxp  
+set fenc=UTF-8  
+set fencs=UTF-8,chinese  
+syntax on                               " Syntax Highlight on 
+ 
+ 
+"--------------------------------------------------------------------------  
+" Options for Graphic version of VIM 
+"--------------------------------------------------------------------------  
+set guioptions-=T           " No Toolbar 
+set guioptions-=L           " No left hand scrollbars  
+set guioptions-=r           " No right hand scrollbars 
+set guioptions-=m           " No menu bar  
+  
+  
+"-------------------------------------------------------------------------- 
+" Auto commands  
+"-------------------------------------------------------------------------- 
+filetype plugin indent on   " Enable file type indenting and plugins  
+set browsedir=buffer  
+set autochdir  
+  
+  
+"-------------------------------------------------------------------------- 
+" Color scheme  
+"-------------------------------------------------------------------------- 
+"set t_Co=256  
+colorscheme murphy  
+"colorscheme vibrantink 
+"highlight StatusLine gui=none  
+"highlight SpecialKey guibg=bg 
+"highlight Folded     gui=none  
+"highlight Boolean    gui=none 
+ 
+ 
+" -------------------------------------------------------------------------  
+" Other 
+" -------------------------------------------------------------------------  
+auto BufEnter * let &titlestring = expand("%:p") . " (" . &ft .":" . &fenc . ") "   
